@@ -21,6 +21,7 @@
 </head>
 <body>
     <div id="app">
+        <input type="hidden" name="base_path" id="base_path" value="{{ url('/') }}">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -44,6 +45,9 @@
         <main class="py-4">
             @yield('content')
         </main>
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        @yield('scripts')
     </div>
 </body>
 </html>

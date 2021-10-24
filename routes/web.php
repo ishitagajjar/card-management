@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/card', [App\Http\Controllers\HomeController::class, 'list']); 
+Route::get('/card/{slug}', [App\Http\Controllers\HomeController::class, 'edit'])->name('card'); 
+Route::post('/store', [App\Http\Controllers\HomeController::class, 'store']); 
+Route::post('/update', [App\Http\Controllers\HomeController::class, 'update']); 
